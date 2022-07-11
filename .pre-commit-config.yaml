@@ -41,7 +41,7 @@ repos:
       - id: isort
         name: isort
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.26.3
+    rev: v1.27.1
     hooks:
       - id: yamllint
         files: \.(yaml|yml)$
@@ -54,7 +54,7 @@ repos:
           - types-pkg_resources
         args: [--no-strict-optional, --ignore-missing-imports, --show-error-codes]
   - repo: https://github.com/asottile/pyupgrade
-    rev: v2.34.0
+    rev: v2.37.1
     hooks:
       - id: pyupgrade
         args: [--py38-plus]
