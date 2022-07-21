@@ -570,6 +570,18 @@ class Dashboard(Resource):
             self._parse_raw(raw)
         self.raw: Dict[str, Any] = cast(Dict[str, Any], self.raw)
 
+class DashboardItem(Resource):
+    """A Jira dashboard item."""
+    def __init__(
+        self,
+        options: Dict[str, str],
+        session: ResilientSession,
+        raw: Dict[str, Any] = None,
+    ):
+        Resource.__init__(self, "dashboard/{0}/items/{1}", options, session)
+        if raw:
+            self._parse_raw(raw)
+        self.raw: Dict[str, Any] = cast(Dict[str, Any], self.raw)
 
 class Filter(Resource):
     """An issue navigator filter."""
